@@ -27,7 +27,7 @@ for i in range(10):
         turn = '0'
     else:
         turn = 'X'
-    if count < 9:
+    if count <= 9:
         if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ':
             printBoard(theBoard)
             print("\nGame Over.\n")
@@ -68,8 +68,7 @@ for i in range(10):
             print("\nGame Over.\n")
             print(theBoard['1'] + ' won')
             break
-    if count == 9:
-        print("It's a tie!")
-        break
-
-
+        elif count == 9:
+            printBoard(theBoard)
+            print("It's a tie!")
+            break
